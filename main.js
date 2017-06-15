@@ -17,34 +17,33 @@
   });
 
   function displayCustomer(obj) {
+    var heading = document.createElement('h1');
     var person = document.createElement('div');
-    var name = document.createElement('span');
-    var email = document.createElement('span');
+    var name = document.createElement('h2');
+    var email = document.createElement('h5');
     var street = document.createElement('span');
     var cityState = document.createElement('span');
     var phone = document.createElement('span');
+    var soc = document.createElement('h4');
     person.innerHTML = '<img src="' + obj.picture.large + '">';
     name.innerHTML = obj.name.first + ' ' + obj.name.last;
     email.innerHTML = obj.email;
     street.innerHTML = obj.location.street;
     cityState.innerHTML = obj.location.city + ' ' + obj.location.state + ' ' + obj.location.postcode;
     phone.innerHTML = obj.phone;
+    heading.textContent = 'INTERNAL COMPANY DIRECTORY';
+    soc.textContent = '823-74-1534';
+    // body.appendChild(heading);
     container.appendChild(person);
     person.appendChild(name);
     person.appendChild(email);
     person.appendChild(street);
     person.appendChild(cityState);
     person.appendChild(phone);
+    person.appendChild(soc);
+
 
 
   }
 
 })();
-// + obj.name.first + ' ' + obj.name.last + obj.email;
-// person.innerHTML = '<img src="' + obj.picture.large + '">';
-// person.innerHTML += obj.name.first + ' ' + obj.name.last;
-// person.innerHTML += obj.email;
-// person.innerHTML += obj.location.street;
-// person.innerHTML += obj.location.city + ' ' + obj.location.state + ' ' + obj.location.postcode;
-// person.innerHTML += obj.phone;
-// container.appendChild(person);
