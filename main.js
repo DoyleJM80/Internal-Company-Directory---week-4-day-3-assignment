@@ -9,7 +9,6 @@
 
   fetch(url).then(function(response){
     response.json().then(function(customers){
-      console.log(customers);
       for (var i = 0; i < customers.results.length; i++) {
         displayCustomer(customers.results[i]);
       }
@@ -17,7 +16,6 @@
   });
 
   function displayCustomer(obj) {
-    var heading = document.createElement('h1');
     var person = document.createElement('div');
     var name = document.createElement('h2');
     var email = document.createElement('h5');
@@ -33,7 +31,6 @@
     phone.innerHTML = obj.phone;
     heading.textContent = 'INTERNAL COMPANY DIRECTORY';
     soc.textContent = '823-74-1534';
-    // body.appendChild(heading);
     container.appendChild(person);
     person.appendChild(name);
     person.appendChild(email);
@@ -42,8 +39,8 @@
     person.appendChild(phone);
     person.appendChild(soc);
 
-
-
   }
+  var heading = document.createElement('h1');
+  container.appendChild(heading);
 
 })();
